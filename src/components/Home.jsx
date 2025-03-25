@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const HomePage = () => {
-    const [queryParameters] = useSearchParams()
+    const navigate = useNavigate()
     const [loggedUser, setLoggedUser] = useState(null)
     const [redirect, setRedirect] = useState(null)
     
@@ -15,19 +15,14 @@ const HomePage = () => {
     },[loggedUser])
 
     useEffect(()=>{
-        let state = queryParameters.get("state")
-        let code = queryParameters.get("code")
-        let scope = queryParameters.get("scope")
-        if(code){
-            axios.get('http://localhost:5000/auth/google/callback',{
-                params:{state:state,code:code,scope:scope}
-            })
+        const query = window.location.search
+        axios.get(`http://localhost:5000/auth/google/callback${query}`)
             .then(res=>{
                 console.log(res)
                 setLoggedUser(res.data)
             })
-        }
-    },[queryParameters])
+            .catch(err=>console.log(err))
+    },[navigate])
 
     return (
         <>
