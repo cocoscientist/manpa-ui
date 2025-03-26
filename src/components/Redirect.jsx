@@ -7,7 +7,7 @@ const Redirect = () => {
 
     useEffect(()=>{
         const query = window.location.search
-        axios.get(`http://localhost:5000/auth/google/callback${query}`)
+        axios.get(`https://www.manpa.co.in/auth/google/callback${query}`)
             .then(res=>{
                 console.log(res)
                 localStorage.setItem("token",res.data.access_token)
