@@ -15,18 +15,25 @@ const HomePage = () => {
     },[loggedUser])
 
     useEffect(()=>{
-        const query = window.location.search
-        axios.get(`http://localhost:5000/auth/google/callback${query}`)
-            .then(res=>{
-                console.log(res)
-                setLoggedUser(res.data)
+        const token = localStorage.getItem("token")
+        if(token){
+            axios.get('http://localhost:5000/authenticated-route',{
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
             })
-            .catch(err=>console.log(err))
+            .then(res=>{
+                console.log(res.data)
+                setLoggedUser(res.data.message)
+            })
+        }
     },[navigate])
 
     return (
         <>
-        {loggedUser?<h1>LOGGED IN</h1>:<div className='middle'><h1>COMING SOON</h1><a href={redirect}>LOGIN WITH GOOGLE</a></div>}
+        <div className='middle'>
+        {loggedUser?<h1>{loggedUser}</h1>:<><h1>COMING SOON</h1><a href={redirect}>LOGIN WITH GOOGLE</a></>}
+        </div>
         </>
     )
 }

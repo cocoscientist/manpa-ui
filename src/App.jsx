@@ -5,8 +5,9 @@ import {
 import HomePage from './components/Home'
 import './css/style.css'
 import Navigation from './components/Navigation'
+import Redirect from './components/Redirect'
 // import Messages from './components/Messages'
-// import About from './components/About'
+import About from './components/About'
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/app' element={<HomePage/>}/>
-        {/* <Route path='/messages' element={<Messages/>}/>
-        <Route path='/about' element={<About/>}/> */}
+        <Route path='/redirect' element={<Redirect/>}/>
+        {/* <Route path='/messages' element={<Messages/>}/> */}
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </>
   )
