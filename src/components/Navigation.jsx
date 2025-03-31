@@ -19,6 +19,7 @@ const Navigation = () => {
   const location = useLocation();
   const [anchorEl, setAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
+  const [authUrl, setAuthUrl] = useState(null);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -38,7 +39,7 @@ const Navigation = () => {
   useEffect(()=>{
     const token = localStorage.getItem("token")
     if(token!==null && token!==undefined){
-        axios.get('http://localhost:5000/authenticated-user-details',{
+        axios.get('https://www.manpa.co.in/authenticated-user-details',{
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -49,6 +50,14 @@ const Navigation = () => {
         })
     }
   },[navigate])
+
+  useEffect(() => {
+    if (user===null) {
+      axios.get('https://www.manpa.co.in/auth/google/authorize')
+        .then(res => setAuthUrl(res.data.authorization_url))
+        .catch(err => console.log(err));
+    }
+  }, [user]);
 
   return (
     <AppBar position="static" className="navbar">
@@ -123,7 +132,7 @@ const Navigation = () => {
         ) : (
           <Button 
             className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`}
-            onClick={() => window.location.href='http://localhost:5000/auth/google'}
+            onClick={() => {if(authUrl !== null) {window.location.href = authUrl} else {console.log('AuthUrl is null')}}}
           >
             Login
           </Button>

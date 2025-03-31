@@ -5,19 +5,13 @@ import axios from 'axios'
 const HomePage = () => {
     const navigate = useNavigate()
     const [loggedUser, setLoggedUser] = useState(null)
-    const [redirect, setRedirect] = useState(null)
-    
-    useEffect(()=>{
-        if(loggedUser==null){
-            axios.get('http://localhost:5000/auth/google/authorize')
-            .then(res=>setRedirect(res.data.authorization_url))
-        }
-    },[loggedUser])
 
     useEffect(()=>{
         const token = localStorage.getItem("token")
         if(token!==undefined && token!==null){
-            axios.get('http://localhost:5000/authenticated-route',{
+            console.log("Token found")
+            console.log(token)
+            axios.get('https://www.manpa.co.in/authenticated-route',{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -27,12 +21,16 @@ const HomePage = () => {
                 setLoggedUser(res.data.message)
             })
         }
+        else {
+            console.log("Token not found");
+            setLoggedUser(null);
+        }
     },[navigate])
 
     return (
         <>
         <div className='middle'>
-        {loggedUser?<h1>{loggedUser}</h1>:<><h1>COMING SOON</h1><a href={redirect}>LOGIN WITH GOOGLE</a></>}
+        {loggedUser?<h1>{loggedUser}</h1>:<h1>COMING SOON</h1>}
         </div>
         </>
     )
