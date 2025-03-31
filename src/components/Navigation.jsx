@@ -20,7 +20,20 @@ const Navigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
 
-  // ...existing useEffect, handleMenu, handleClose, handleLogout...
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setUser(null);
+    handleClose();
+    navigate('/home');
+  };
 
   useEffect(()=>{
     const token = localStorage.getItem("token")
