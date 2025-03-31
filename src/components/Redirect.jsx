@@ -7,11 +7,11 @@ const Redirect = () => {
 
     useEffect(()=>{
         const query = window.location.search
-        axios.get(`https://www.manpa.co.in/auth/google/callback${query}`)
+        axios.get(`https://manpa.co.in/auth/google/callback${query}`)
             .then(res=>{
                 console.log(res)
                 localStorage.setItem("token",res.data.access_token)
-                navigate('/app')
+                navigate('/home')
             })
             .catch(err=>console.log(err))
     },[navigate])

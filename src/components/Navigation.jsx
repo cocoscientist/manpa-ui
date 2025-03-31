@@ -4,11 +4,11 @@ const Navigation = () =>{
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="/app">MANPA</Navbar.Brand>
+                <Navbar.Brand href="/home">MANPA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="/app">Home</Nav.Link>
+                    <Nav.Link href="/home">Home</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
