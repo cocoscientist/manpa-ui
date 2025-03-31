@@ -9,7 +9,7 @@ const HomePage = () => {
     
     useEffect(()=>{
         if(loggedUser==null){
-            axios.get('https://www.manpa.co.in/auth/google/authorize')
+            axios.get('http://localhost:5000/auth/google/authorize')
             .then(res=>setRedirect(res.data.authorization_url))
         }
     },[loggedUser])
@@ -17,7 +17,7 @@ const HomePage = () => {
     useEffect(()=>{
         const token = localStorage.getItem("token")
         if(token!==undefined && token!==null){
-            axios.get('https://www.manpa.co.in/authenticated-route',{
+            axios.get('http://localhost:5000/authenticated-route',{
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

@@ -22,6 +22,21 @@ const Navigation = () => {
 
   // ...existing useEffect, handleMenu, handleClose, handleLogout...
 
+  useEffect(()=>{
+    const token = localStorage.getItem("token")
+    if(token!==null && token!==undefined){
+        axios.get('http://localhost:5000/authenticated-user-details',{
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(res=>{
+            console.log(res.data)
+            setUser(res.data)
+        })
+    }
+  },[navigate])
+
   return (
     <AppBar position="static" className="navbar">
       <CssBaseline/>
@@ -95,7 +110,7 @@ const Navigation = () => {
         ) : (
           <Button 
             className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`}
-            onClick={() => window.location.href='https://www.manpa.co.in/auth/google'}
+            onClick={() => window.location.href='http://localhost:5000/auth/google'}
           >
             Login
           </Button>
