@@ -14,7 +14,7 @@ function App() {
     <>
       <Navigation/>
       <Routes>
-        <Route path='/app' element={<HomePage/>}/>
+        <Route path='/home' element={<HomePage/>}/>
         <Route path='/redirect' element={<Redirect/>}/>
         {/* <Route path='/messages' element={<Messages/>}/> */}
         <Route path='/about' element={<About/>}/>
