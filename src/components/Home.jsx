@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const HomePage = () => {
     const navigate = useNavigate()
+    const location = useLocation()
     const [loggedUser, setLoggedUser] = useState(null)
 
     useEffect(()=>{
@@ -25,7 +26,7 @@ const HomePage = () => {
             console.log("Token not found");
             setLoggedUser(null);
         }
-    },[navigate])
+    },[navigate, location.key])
 
     return (
         <>
