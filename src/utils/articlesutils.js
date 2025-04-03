@@ -1,20 +1,14 @@
-import * as articlesList from "./articles.json"
+import { articlesList } from "./articles"
 
-const pageSize = 4
-
-const getTotalPages = () => {
+export const getTotalPages = () => {
     return Math.ceil(articlesList.length/4)
 }
 
-const getArticlesByPage = (page) => {
+export const getArticlesByPage = (page) => {
     let list = []
-    const start = pageSize*(i-1)
-    for(let i=start;i<start+pageSize;i++){
-        if(i<articlesList.length){
-            list.push(articlesList[i])
-        }else{
-            break
-        }
+    const start = 4*(page-1)
+    for(let i=start;i<Math.min(start+4,articlesList.length);i++){
+        list.push(articlesList[i])
     }
     return list
 }
