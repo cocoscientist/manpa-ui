@@ -24,7 +24,7 @@ const ArticleList = () => {
     return (
         <>
             {articlesList.length!=0?
-            articlesList.map(a=><ArticleCard title={a.title} intro={a.intro} author={a.author}/>)
+            articlesList.map(a=><ArticleCard title={a.title} intro={a.intro} author={a.author} id={a.id}/>)
             :<div>No articles found</div>}
             <Stack spacing={2} sx={{margin:'20px'}}>
                 <Pagination count={totalPages} page={page} onChange={(e,v)=>setCurrentPage(v)} />

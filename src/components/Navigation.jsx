@@ -12,7 +12,7 @@ import {
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import '../css/Navigation.css';
+import '../css/navigation.css';
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -94,6 +94,12 @@ const Navigation = () => {
           className={`nav-link ${location.pathname === '/redirect' ? 'active' : ''}`}
         >
           Redirect
+        </Button>
+        <Button 
+          onClick={() => navigate('/blogs')}
+          className={`nav-link ${location.pathname === '/blogs' ? 'active' : ''}`}
+        >
+          Blogs
         </Button>
 
         {/* Profile Section */}
