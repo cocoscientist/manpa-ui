@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import * as articleutils from '../utils/articlesutils'
 import ArticleCard from './articles/ArticleCard'
 import { Stack, Pagination } from '@mui/material'
+import '../css/ArticleList.css'
 
 const ArticleList = () => {
     const [page, setCurrentPage] = useState(1)
@@ -22,14 +23,31 @@ const ArticleList = () => {
     },[page])
 
     return (
-        <>
-            {articlesList.length!=0?
-            articlesList.map(a=><ArticleCard title={a.title} intro={a.intro} author={a.author} id={a.id}/>)
-            :<div>No articles found</div>}
-            <Stack spacing={2} sx={{margin:'20px'}}>
-                <Pagination count={totalPages} page={page} onChange={(e,v)=>setCurrentPage(v)} />
-            </Stack>
-        </>
+        <div className="article-list-container">
+            <div className="articles-wrapper">
+                {articlesList.length !== 0 
+                    ? articlesList.map(a => (
+                        <ArticleCard 
+                            key={a.id}
+                            title={a.title} 
+                            intro={a.intro} 
+                            author={a.author} 
+                            id={a.id}
+                        />
+                    ))
+                    : <div>No articles found</div>
+                }
+            </div>
+            <div className="pagination-wrapper">
+                <Stack spacing={2}>
+                    <Pagination 
+                        count={totalPages} 
+                        page={page} 
+                        onChange={(e,v) => setCurrentPage(v)} 
+                    />
+                </Stack>
+            </div>
+        </div>
     )
 }
 

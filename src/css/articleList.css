@@ -1,0 +1,16 @@
+.article-list-container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .articles-wrapper {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .pagination-wrapper {
+    margin-top: auto;
+    display: flex;
+    margin-left: 3%;
+  }

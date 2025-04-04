@@ -90,12 +90,6 @@ const Navigation = () => {
           About
         </Button>
         <Button 
-          onClick={() => navigate('/redirect')}
-          className={`nav-link ${location.pathname === '/redirect' ? 'active' : ''}`}
-        >
-          Redirect
-        </Button>
-        <Button 
           onClick={() => navigate('/blogs')}
           className={`nav-link ${location.pathname === '/blogs' ? 'active' : ''}`}
         >

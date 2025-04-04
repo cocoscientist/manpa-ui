@@ -5,7 +5,7 @@ const ArticleCard = (props) => {
     const navigate = useNavigate()
 
     return (
-        <Card>
+        <Card square={true} sx={{width: '80%', marginLeft: '3%', borderBottom: 2, boxShadow: "none", borderColor: '#9c27b0'}}>
             <CardActionArea sx={{ display: 'flex' }} onClick={()=>{navigate(`/blog/${props.title}`,{state:props})}}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
