@@ -2,6 +2,7 @@ import { useLocation, useParams } from "react-router-dom"
 import ArticleHeading from "./articles/ArticleHeading"
 import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
+import "../css/articleViewer.css"
 
 const ArticleViewer = () => {
     const location = useLocation()
