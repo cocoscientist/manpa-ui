@@ -42,7 +42,7 @@ const ArticleHeading = (props) => {
                 variant="h5" 
                 sx={{
                     position: 'absolute',
-                    bottom: '2%',
+                    bottom: '10%',
                     left: '6%',
                     color: '#121212'
                 }}

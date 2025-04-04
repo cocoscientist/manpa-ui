@@ -5,9 +5,24 @@ const ArticleCard = (props) => {
     const navigate = useNavigate()
 
     return (
-        <Card square={true} sx={{width: '80%', marginLeft: '3%', borderBottom: 2, boxShadow: "none", borderColor: '#9c27b0'}}>
-            <CardActionArea sx={{ display: 'flex' }} onClick={()=>{navigate(`/blog/${props.title}`,{state:props})}}>
-                <CardContent>
+        <Card square={true} sx={{
+            width: '80%', 
+            marginLeft: '3%', 
+            borderBottom: 2, 
+            boxShadow: "none", 
+            borderColor: '#9c27b0'
+        }}>
+            <CardActionArea 
+                sx={{ 
+                    display: 'flex', // Set a fixed height for CardActionArea
+                    position: 'relative', // For child absolute positioning
+                    justifyContent: 'flex-start'
+                }} 
+                onClick={() => {
+                    navigate(`/blog/${props.title}`, {state: props})
+                }}
+            >
+                <CardContent sx={{ width: '75%', left: '2%' }}>
                     <Typography gutterBottom variant="h5" component="div">
                         {props.title}
                     </Typography>
@@ -18,7 +33,18 @@ const ArticleCard = (props) => {
                         Written by {props.author}
                     </Typography>
                 </CardContent>
-                <Skeleton sx={{width:'280px'}} animation="wave" variant="rectangular" />
+                <Skeleton 
+                    sx={{
+                        width: '20%',
+                        height: '80%', // 80% of parent height
+                        position: 'absolute',
+                        right: '2%',
+                        top: '50%',
+                        transform: 'translateY(-50%)'
+                    }} 
+                    animation="wave" 
+                    variant="rectangular" 
+                />
             </CardActionArea>
         </Card>
     )
