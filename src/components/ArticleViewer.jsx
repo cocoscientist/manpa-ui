@@ -20,10 +20,15 @@ const ArticleViewer = () => {
     },[])
 
     return (
-        <>
-            <ArticleHeading title={articleData.title}/>
-            {articleText!==""?<ReactMarkdown>{articleText}</ReactMarkdown>:<div>Loading Article</div>}
-        </>
+        <div className="article-viewer-container">
+            <ArticleHeading title={articleData.title} credentials={articleData.credentials}/>
+            <div className="article-content">
+                {articleText!==""
+                    ? <ReactMarkdown>{articleText}</ReactMarkdown>
+                    : <div>Loading Article</div>
+                }
+            </div>
+        </div>
     )
 }
 

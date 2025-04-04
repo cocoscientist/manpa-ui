@@ -28,11 +28,11 @@ const ArticleList = () => {
                 {articlesList.length !== 0 
                     ? articlesList.map(a => (
                         <ArticleCard 
-                            key={a.id}
                             title={a.title} 
                             intro={a.intro} 
                             author={a.author} 
                             id={a.id}
+                            credentials={a.credentials}
                         />
                     ))
                     : <div>No articles found</div>
