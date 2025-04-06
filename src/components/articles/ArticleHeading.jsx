@@ -8,7 +8,8 @@ const ArticleHeading = (props) => {
         <div style={{
             position: 'relative', 
             textAlign: 'center',
-            height: '50vh'  // 40% of viewport height
+            height: '50vh',  // 40% of viewport height
+            backgroundColor: '#FFDF92',
         }}>
             <Skeleton 
                 width={'100%'} 
@@ -22,7 +23,8 @@ const ArticleHeading = (props) => {
                     position: 'absolute',
                     top: '4%',
                     left: '2%',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    color: '#852197'
                 }}
             >
                 &lt; <u>Back</u>

@@ -44,6 +44,15 @@ const ArticleList = () => {
                         count={totalPages} 
                         page={page} 
                         onChange={(e,v) => setCurrentPage(v)} 
+                        sx={{
+                            color: '#9c27b0', // Set text color to purple for all items
+                            "& .MuiPaginationItem-root": {
+                                color: '#9c27b0' // Set text color to purple for all items
+                            },
+                            "& .MuiPaginationItem-root.Mui-selected": {
+                                color: '#9c27b0' // Set text color to purple for selected item
+                            }
+                        }}
                     />
                 </Stack>
             </div>

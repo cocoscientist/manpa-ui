@@ -2,10 +2,11 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FEF7E7 !important;
 }
 
 .article-content {
     flex: 1;
-    margin: 0 5%; 
+    margin: 0 20%; 
     max-width: 90%; 
 }
