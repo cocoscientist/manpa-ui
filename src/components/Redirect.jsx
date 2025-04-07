@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { CircularProgress } from '@mui/material'
 
 const Redirect = () => {
     const navigate = useNavigate()
@@ -17,9 +18,9 @@ const Redirect = () => {
     },[navigate])
 
     return (
-        <>
-        <div className='middle'><h1>REDIRECTING</h1></div>
-        </>
+        <div style={{ backgroundColor: '#FFDF92', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <CircularProgress size={60} sx={{color:'#9c27b0'}}></CircularProgress>
+        </div>
     )
 }
 

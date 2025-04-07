@@ -12,7 +12,7 @@ import {
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import '../css/Navigation.css';
+import '../css/navigation.css';
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -84,18 +84,17 @@ const Navigation = () => {
           Home
         </Button>
         <Button 
-          onClick={() => navigate('/about')}
-          className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+          onClick={() => navigate('/blogs')}
+          className={`nav-link ${location.pathname === '/blogs' ? 'active' : ''}`}
         >
-          About
+          Blogs
         </Button>
         <Button 
-          onClick={() => navigate('/redirect')}
-          className={`nav-link ${location.pathname === '/redirect' ? 'active' : ''}`}
+          onClick={() => navigate('/contact')}
+          className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
         >
-          Redirect
+          Contact
         </Button>
-
         {/* Profile Section */}
         {user ? (
           <>

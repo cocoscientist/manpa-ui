@@ -1,0 +1,36 @@
+import { useLocation, useParams } from "react-router-dom"
+import ArticleHeading from "./articles/ArticleHeading"
+import { useEffect, useState } from "react"
+import ReactMarkdown from "react-markdown"
+import "../css/articleViewer.css"
+
+const ArticleViewer = () => {
+    const location = useLocation()
+    const articleData = location.state
+    const [articleText, setArticleText] = useState("")
+
+    useEffect(()=>{
+        console.log(location)
+        console.log(articleData.id)
+        import(`../utils/articles/${articleData.id}.md`)
+        .then(curFile=>{
+            fetch(curFile.default)
+            .then(res=>res.text())
+            .then(txt=>setArticleText(txt))
+        })
+    },[])
+
+    return (
+        <div className="article-viewer-container">
+            <ArticleHeading title={articleData.title} credentials={articleData.credentials}/>
+            <div className="article-content">
+                {articleText!==""
+                    ? <ReactMarkdown>{articleText}</ReactMarkdown>
+                    : <div>Loading Article</div>
+                }
+            </div>
+        </div>
+    )
+}
+
+export default ArticleViewer
