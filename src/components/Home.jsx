@@ -225,7 +225,8 @@ const HomePage = () => {
                                 minWidth: 280, 
                                 scrollSnapAlign: 'start', 
                                 boxShadow: 'none', 
-                                border: 'none' 
+                                backgroundColor: '#F1E8FF', // Match parent background color
+                                border: 'none' // Add faint black outline 
                             }}
                             onClick={() => {
                                 navigate(`/blog/${article.title}`, { state: article })
@@ -238,7 +239,8 @@ const HomePage = () => {
                                     sx={{
                                         borderRadius: '4px',
                                         objectFit: 'cover',
-                                        scrollSnapAlign: 'start'
+                                        scrollSnapAlign: 'start',
+                                        border: '1px solid rgb(59, 59, 59, 1)'
                                     }}
                                 />
                                 <CardContent>
