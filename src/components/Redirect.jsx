@@ -18,7 +18,9 @@ const Redirect = () => {
     },[navigate])
 
     return (
-        <CircularProgress size={60} className='middle' sx={{color:'#9c27b0'}}></CircularProgress>
+        <div style={{ backgroundColor: '#FFDF92', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <CircularProgress size={60} sx={{color:'#9c27b0'}}></CircularProgress>
+        </div>
     )
 }
 

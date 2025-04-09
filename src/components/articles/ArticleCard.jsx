@@ -10,7 +10,8 @@ const ArticleCard = (props) => {
             marginLeft: '3%', 
             borderBottom: 2, 
             boxShadow: "none", 
-            borderColor: '#9c27b0'
+            borderColor: '#9c27b0',
+            backgroundColor: '#FEF7E7',
         }}>
             <CardActionArea 
                 sx={{ 

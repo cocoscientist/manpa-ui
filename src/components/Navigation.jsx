@@ -84,18 +84,17 @@ const Navigation = () => {
           Home
         </Button>
         <Button 
-          onClick={() => navigate('/about')}
-          className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
-        >
-          About
-        </Button>
-        <Button 
           onClick={() => navigate('/blogs')}
           className={`nav-link ${location.pathname === '/blogs' ? 'active' : ''}`}
         >
           Blogs
         </Button>
-
+        <Button 
+          onClick={() => navigate('/contact')}
+          className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+        >
+          Contact
+        </Button>
         {/* Profile Section */}
         {user ? (
           <>
