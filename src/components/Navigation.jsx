@@ -33,7 +33,7 @@ const Navigation = () => {
     localStorage.removeItem('token');
     setUser(null);
     handleClose();
-    navigate('/home');
+    navigate('/');
   };
 
   useEffect(()=>{
@@ -68,7 +68,7 @@ const Navigation = () => {
           variant="h6"
           component="div"
           className="navbar-logo"
-          onClick={() => navigate('/home')}
+          onClick={() => navigate('/')}
         >
           LOGO
         </Typography>
@@ -78,8 +78,8 @@ const Navigation = () => {
 
         {/* Navigation Links */}
         <Button 
-          onClick={() => navigate('/home')}
-          className={`nav-link ${location.pathname === '/home' ? 'active' : ''}`}
+          onClick={() => navigate('/')}
+          className={`nav-link ${location.pathname === '/home' || location.pathname === '/' ? 'active' : ''}`}
         >
           Home
         </Button>

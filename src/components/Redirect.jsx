@@ -12,7 +12,7 @@ const Redirect = () => {
             .then(res=>{
                 console.log(res)
                 localStorage.setItem("token",res.data.access_token)
-                navigate('/home')
+                navigate('/')
             })
             .catch(err=>console.log(err))
     },[navigate])
