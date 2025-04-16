@@ -95,6 +95,12 @@ const Navigation = () => {
         >
           Contact
         </Button>
+        <Button 
+          onClick={() => navigate('/people')}
+          className={`nav-link ${location.pathname === '/people' ? 'active' : ''}`}
+        >
+          People
+        </Button>
         {/* Profile Section */}
         {user ? (
           <>
