@@ -5,14 +5,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
+import { CardActionArea } from '@mui/material';
 
 const PeopleCard = (props) => {
     return (
-        <Card>
-            <CardMedia
-                sx={{ height: '50%' }}
-                image="assets/hero.jpg"
-                title="person image"
+        <Card sx={{boxShadow: "none", backgroundColor: '#FEF7E7'}}>
+            <CardActionArea>
+            <Skeleton 
+                    sx={{
+                        height:'150px',
+                        width:'50%',
+                        borderRadius: '18%',
+                        marginLeft:'25%',
+                        marginTop:'3%'
+                    }}  
+                    variant="rectangular" 
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{textAlign:"center"}}>
@@ -22,6 +30,7 @@ const PeopleCard = (props) => {
                 Card Description
                 </Typography>
             </CardContent>
+            </CardActionArea>
         </Card>
     )
 }

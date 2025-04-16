@@ -20,6 +20,12 @@ const People = () => {
                 <Grid size={{ xs: 6, md: 3 }}>
                     <PeopleCard/>
                 </Grid>
+                <Grid size={{ xs: 6, md: 3 }}>
+                    <PeopleCard/>
+                </Grid>
+                <Grid size={{ xs: 6, md: 3 }}>
+                    <PeopleCard/>
+                </Grid>
             </Grid>
         </div>
     )
