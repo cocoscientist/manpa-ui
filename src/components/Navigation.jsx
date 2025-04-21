@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import '../css/navigation.css';
+import Logo from '../../public/assets/logosquare.png'
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -64,14 +65,15 @@ const Navigation = () => {
       <CssBaseline/>
       <Toolbar>
         {/* Logo */}
-        <Typography
+        <div className='navbar-logo' style={{display:'flex'}}><img src={Logo} height={56}/></div>
+        {/* <Typography
           variant="h6"
           component="div"
           className="navbar-logo"
           onClick={() => navigate('/')}
         >
           LOGO
-        </Typography>
+        </Typography> */}
 
         {/* Spacer */}
         <div className="navbar-spacer" />
