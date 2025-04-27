@@ -6,6 +6,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import axios from 'axios'
 import '../css/fonts.css'
+import Carousel from './Carousel';
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -302,6 +303,8 @@ const HomePage = () => {
                 position: 'relative',
                 bgcolor: '#FFD8B9',
                 overflow: 'hidden',
+                pb: 10,
+                px: 7
             }}>
                 <Box
                     sx={{
@@ -360,98 +363,7 @@ const HomePage = () => {
                         </Typography>
                     </Box>
                 </Container>
-                <Container maxWidth="lg" sx={{ position: 'relative', mt: 1 }}>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            overflowX: 'auto',
-                            scrollSnapType: 'x mandatory',
-                            gap: 2,
-                            py: 2,
-                            scrollBehavior: 'smooth',
-                        }}
-                        ref={scrollRef => { window.scrollRef = scrollRef }}
-                    >
-                        {articlesList.map((article, index) => (
-                            <Card sx={{
-                                height: '100%',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                minWidth: 280,
-                                scrollSnapAlign: 'start',
-                                boxShadow: 'none',
-                                border: 'none',
-                                backgroundColor: 'transparent'
-                            }}
-                                onClick={() => {
-                                    navigate(`/blog/${article.title}`, { state: article })
-                                }}>
-                                <CardMedia
-                                    component="img"
-                                    height="200"
-                                    image={article.image}
-                                    alt={article.title}
-                                    sx={{
-                                        borderRadius: '12px',
-                                        objectFit: 'cover',
-                                        scrollSnapAlign: 'start'
-                                    }}
-                                />
-                                <CardContent sx={{ px: 0.5 }}>
-                                    <Typography variant="h6" sx={{
-                                        color: '#2C1239',
-                                        fontWeight: 700,
-                                        fontFamily: 'Inter',
-                                        fontSize: '24px',
-                                    }}>
-                                        {article.title}
-                                    </Typography>
-                                    <Typography variant="subtitle2" fontStyle="italic" mt={0.5} mb={1} sx={{
-                                        color: '#2C1239',
-                                        fontFamily: 'Avenir, sans-serif',
-                                        fontWeight: 500,
-                                        fontSize: '15px',
-                                    }}>
-                                        written by {article.author}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </Box>
-                    <ArrowBackIosNewIcon
-                        sx={{
-                            position: 'absolute',
-                            top: '50%',
-                            left: -16,
-                            zIndex: 10,
-                            cursor: 'pointer',
-                            background: '#fff',
-                            borderRadius: '50%',
-                            boxShadow: 2,
-                            p: 0.5
-                        }}
-                        onClick={() => {
-                            if (window.scrollRef) window.scrollRef.scrollBy({ left: -300, behavior: 'smooth' });
-                        }}
-                    />
-                    <ArrowForwardIosIcon
-                        sx={{
-                            position: 'absolute',
-                            top: '50%',
-                            right: -16,
-                            zIndex: 10,
-                            cursor: 'pointer',
-                            background: '#fff',
-                            borderRadius: '50%',
-                            boxShadow: 2,
-                            p: 0.5
-                        }}
-                        onClick={() => {
-                            if (window.scrollRef) window.scrollRef.scrollBy({ left: 300, behavior: 'smooth' });
-                        }}
-                    />
-                </Container>
-
+                <Carousel articlesList={articlesList} />
             </Box>
         </Box>
     )
