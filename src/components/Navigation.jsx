@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import '../css/navigation.css';
+import Logo from '../../public/assets/logosquare.png'
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const Navigation = () => {
     localStorage.removeItem('token');
     setUser(null);
     handleClose();
-    navigate('/home');
+    navigate('/');
   };
 
   useEffect(()=>{
@@ -64,22 +65,23 @@ const Navigation = () => {
       <CssBaseline/>
       <Toolbar>
         {/* Logo */}
-        <Typography
+        <div className='navbar-logo' style={{display:'flex'}}><img src={Logo} height={56}/></div>
+        {/* <Typography
           variant="h6"
           component="div"
           className="navbar-logo"
-          onClick={() => navigate('/home')}
+          onClick={() => navigate('/')}
         >
           LOGO
-        </Typography>
+        </Typography> */}
 
         {/* Spacer */}
         <div className="navbar-spacer" />
 
         {/* Navigation Links */}
         <Button 
-          onClick={() => navigate('/home')}
-          className={`nav-link ${location.pathname === '/home' ? 'active' : ''}`}
+          onClick={() => navigate('/')}
+          className={`nav-link ${location.pathname === '/home' || location.pathname === '/' ? 'active' : ''}`}
         >
           Home
         </Button>
@@ -94,6 +96,12 @@ const Navigation = () => {
           className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
         >
           Contact
+        </Button>
+        <Button 
+          onClick={() => navigate('/people')}
+          className={`nav-link ${location.pathname === '/people' ? 'active' : ''}`}
+        >
+          People
         </Button>
         {/* Profile Section */}
         {user ? (

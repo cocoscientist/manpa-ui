@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import * as articleutils from '../utils/articlesutils'
 import ArticleCard from './articles/ArticleCard'
 import { Stack, Pagination } from '@mui/material'
-import '../css/ArticleList.css'
+import '../css/articleList.css'
 
 const ArticleList = () => {
     const [page, setCurrentPage] = useState(1)
