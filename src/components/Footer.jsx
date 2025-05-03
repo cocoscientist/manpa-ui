@@ -8,7 +8,7 @@ const Footer = () => {
       padding: '20px',
       width: '100%',
     }}>
-      <p>Made with 💜 by Ma's & Pa's</p>
+      <p>Made with 💜 by Ma(s) & Pa(s)</p>
     </footer>
   );
 };
