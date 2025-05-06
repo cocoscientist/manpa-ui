@@ -11,7 +11,7 @@ const ArticleCard = (props) => {
             borderBottom: 2, 
             boxShadow: "none", 
             borderColor: '#9c27b0',
-            backgroundColor: '#FEF7E7',
+            backgroundColor: '#F4F6F7',
         }}>
             <CardActionArea 
                 sx={{ 

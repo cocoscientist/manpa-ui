@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #f7e3b4 !important;
+    background-color: #183A75 !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   }
   
@@ -14,7 +14,7 @@
   }
   
   .nav-link {
-    color: #3c3348 !important;
+    color: #FFFFFF !important;
     position: relative !important;
     margin: 0 8px !important;
     text-transform: none !important;
@@ -27,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #9c27b0;
+    background-color: #FFFFFF;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
   }
