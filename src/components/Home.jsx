@@ -117,7 +117,7 @@ const HomePage = () => {
                                     letterSpacing: '0px',
                                 }}
                             >
-                                Welcome to manpa, a co-owned space built to support and uplift <em>every parent</em>, just like you.
+                                Welcome to Ma & Pa, a co-owned space built to support and uplift <em>every parent</em>, just like you.
                             </Typography>
                         </Box>
                     </Box>
@@ -216,7 +216,7 @@ const HomePage = () => {
                                     color: '#2C1239'
                                 }}
                             >
-                                What is Manpa?
+                                What is Ma & Pa?
                             </Typography>
                             <Box
                                 onClick={handleClick}
@@ -261,38 +261,22 @@ const HomePage = () => {
                     <Grid container spacing={4} justifyContent="center">
                         <Grid size={6}>
                             <Typography variant="body2" color="text.secondary" textAlign="left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus dui, blandit nec elit a,
-                                rhoncus ullamcorper turpis. Sed eget sollicitudin nisl. Vestibulum vestibulum justo ac convallis
-                                consequat. Donec porttitor neque nec nunc consectetur, nec auctor quam imperdiet. Mauris malesuada
-                                dapibus justo sed ultricies. Cras in posuere erat, non feugiat orci. Maecenas lacinia arcu sit amet
-                                nisl luctus, et sollicitudin enim vehicula. Sed tincidunt nibh at ipsum ornare dignissim.
+                            Hello whoever it is that made it here. If you are here, you are most likely going through a tough time in your life as a parent. 
+It is probably one of the following scenarios that has you looking for help or guidance or just someone to speak to without being judged.
+a)	You are in the middle of a separation / divorce or have gone through that and are wondering how you will manage your kids and your own life now
+b)	You have lost your spouse and now have to worry about your own life and bring up your kids without your spouse
+It could also be that someone close to you is going through this phase and you might be trying to understand and help.
+Unfortunately or fortunately, I have personally experienced the above directly or seen it with someone close to me. 
+I came to realise is that it is a situation that has to be managed at multiple levels and we need help. The situation also changes based on whether one is the father or the mother dealing with this situation.
+While families are there to help, sometimes it needs a bit more and often we need to speak to people who will not judge us for our situation or choices we have made.
                             </Typography>
                         </Grid>
                         <Grid size={6}>
                             <Typography variant="body2" color="text.secondary" textAlign="left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus dui, blandit nec elit a,
-                                rhoncus ullamcorper turpis. Sed eget sollicitudin nisl. Vestibulum vestibulum justo ac convallis
-                                consequat. Donec porttitor neque nec nunc consectetur, nec auctor quam imperdiet. Mauris malesuada
-                                dapibus justo sed ultricies. Cras in posuere erat, non feugiat orci. Maecenas lacinia arcu sit amet
-                                nisl luctus, et sollicitudin enim vehicula. Sed tincidunt nibh at ipsum ornare dignissim.
-                            </Typography>
-                        </Grid>
-                        <Grid size={6}>
-                            <Typography variant="body2" color="text.secondary" textAlign="left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus dui, blandit nec elit a,
-                                rhoncus ullamcorper turpis. Sed eget sollicitudin nisl. Vestibulum vestibulum justo ac convallis
-                                consequat. Donec porttitor neque nec nunc consectetur, nec auctor quam imperdiet. Mauris malesuada
-                                dapibus justo sed ultricies. Cras in posuere erat, non feugiat orci. Maecenas lacinia arcu sit amet
-                                nisl luctus, et sollicitudin enim vehicula. Sed tincidunt nibh at ipsum ornare dignissim.
-                            </Typography>
-                        </Grid>
-                        <Grid size={6}>
-                            <Typography variant="body2" color="text.secondary" textAlign="left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus dui, blandit nec elit a,
-                                rhoncus ullamcorper turpis. Sed eget sollicitudin nisl. Vestibulum vestibulum justo ac convallis
-                                consequat. Donec porttitor neque nec nunc consectetur, nec auctor quam imperdiet. Mauris malesuada
-                                dapibus justo sed ultricies. Cras in posuere erat, non feugiat orci. Maecenas lacinia arcu sit amet
-                                nisl luctus, et sollicitudin enim vehicula. Sed tincidunt nibh at ipsum ornare dignissim.
+I have also had the privilege and honor to have worked with some of the most accomplished professionals over my nearly 3 decades long professional career. All of these folks have carried a desire to contribute more to our society and we hope that together we can help solve some of the problems that single parents face.
+My third realization is that our younger generation just needs a good idea to galvanize into action. I have been toying with this idea for some time now, but it was my sons’ and their group of friends who brough this to life. They have found time from their college education and early careers to help with me this and for that I will be eternally grateful.
+Out of these three insights is where the idea of MA & PA came to life. MA & PA is a forum, platform, safe space (call it what you want really) for single parents to reach out and get help and for a trusted group of coaches / mentors to come together and help solve some of these problems.
+This will be a co-owned space for both parents and coaches / mentors and we can together shape it the way we want to. We will not monetise the data here in any form and the entire funding for this forum will be based on voluntary contributions of time and funds. 
                             </Typography>
                         </Grid>
                     </Grid>

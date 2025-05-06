@@ -30,12 +30,12 @@ const Navigation = () => {
     setAnchorEl(null);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setUser(null);
-    handleClose();
-    navigate('/');
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem('token');
+  //   setUser(null);
+  //   handleClose();
+  //   navigate('/home');
+  // };
 
   useEffect(()=>{
     const token = localStorage.getItem("token")
@@ -80,7 +80,7 @@ const Navigation = () => {
 
         {/* Navigation Links */}
         <Button 
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/home')}
           className={`nav-link ${location.pathname === '/home' || location.pathname === '/' ? 'active' : ''}`}
         >
           Home
@@ -103,7 +103,7 @@ const Navigation = () => {
         >
           People
         </Button>
-        {/* Profile Section */}
+        {/* Profile Section
         {user ? (
           <>
             <IconButton
@@ -143,7 +143,7 @@ const Navigation = () => {
           >
             Login
           </Button>
-        )}
+        )} */}
       </Toolbar>
     </AppBar>
   );
