@@ -9,7 +9,7 @@ const ArticleHeading = (props) => {
             position: 'relative', 
             textAlign: 'center',
             height: '50vh',  // 40% of viewport height
-            backgroundColor: '#FFDF92',
+            backgroundColor: '#183A75',
         }}>
             <Skeleton 
                 width={'100%'} 
@@ -24,7 +24,7 @@ const ArticleHeading = (props) => {
                     top: '4%',
                     left: '2%',
                     cursor: 'pointer',
-                    color: '#852197'
+                    color: '#121212'
                 }}
             >
                 &lt; <u>Back</u>
@@ -35,7 +35,7 @@ const ArticleHeading = (props) => {
                     position: 'absolute',
                     bottom: '25%',
                     left: '6%',
-                    color: '#121212'
+                    color: '#f5f5f5'
                 }}
             >
                 {props.title}
@@ -46,7 +46,7 @@ const ArticleHeading = (props) => {
                     position: 'absolute',
                     bottom: '10%',
                     left: '6%',
-                    color: '#121212'
+                    color: '#f5f5f5'
                 }}
             >
                 {props.credentials}
