@@ -4,7 +4,6 @@ import { Box, Typography, Container, Grid, Card, CardMedia, CardContent } from '
 import { articlesList } from '../utils/articles';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import axios from 'axios'
 import '../css/fonts.css'
 import Carousel from './Carousel';
 
@@ -22,27 +21,6 @@ const HomePage = () => {
     const scrollToSection = () => {
         dayZeroRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
-
-    useEffect(() => {
-        const token = localStorage.getItem("token")
-        if (token !== undefined && token !== null) {
-            console.log("Token found")
-            console.log(token)
-            axios.get('https://www.manpa.co.in/authenticated-route', {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            })
-                .then(res => {
-                    console.log(res.data)
-                    setLoggedUser(res.data.message)
-                })
-        }
-        else {
-            console.log("Token not found");
-            setLoggedUser(null);
-        }
-    }, [navigate, location.key])
 
     return (
         <Box>

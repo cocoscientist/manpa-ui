@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import axios from 'axios';
 import '../css/navigation.css';
 import Logo from '../../public/assets/logosquare.png'
 
@@ -36,29 +35,6 @@ const Navigation = () => {
   //   handleClose();
   //   navigate('/home');
   // };
-
-  useEffect(()=>{
-    const token = localStorage.getItem("token")
-    if(token!==null && token!==undefined){
-        axios.get('https://www.manpa.co.in/authenticated-user-details',{
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
-        .then(res=>{
-            console.log(res.data)
-            setUser(res.data)
-        })
-    }
-  },[navigate])
-
-  useEffect(() => {
-    if (user===null) {
-      axios.get('https://www.manpa.co.in/auth/google/authorize')
-        .then(res => setAuthUrl(res.data.authorization_url))
-        .catch(err => console.log(err));
-    }
-  }, [user]);
 
   return (
     <AppBar position="static" className="navbar">
