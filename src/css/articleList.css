@@ -2,13 +2,13 @@
     min-height: 90vh;
     display: flex;
     flex-direction: column;
-    background-color: #FEF7E7 !important;
+    background-color: #F4F6F7 !important;
   }
   
   .articles-wrapper {
     flex: 1;
     padding: 20px;
-    background-color: #FEF7E7 !important;
+    background-color: #F4F6F7 !important;
   }
   
   .pagination-wrapper {

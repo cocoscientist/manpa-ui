@@ -49,7 +49,7 @@ const HomePage = () => {
             <Box sx={{
                 width: '100%',
                 position: 'relative',
-                bgcolor: '#FFD8B9',
+                bgcolor: '#F4F6F7',
                 minHeight: '90vh',
                 overflow: 'hidden',
             }}>
@@ -67,7 +67,7 @@ const HomePage = () => {
                     preserveAspectRatio="none"
                 >
                     <path d="M0 0H1440V299.5C1440 299.5 1279.26 369.738 1169.5 382C1003.92 400.497 914.743 293.074 749 310C577.731 327.49 510.503 450.676 340 474.5C208.344 492.896 0 458 0 458V0Z"
-                        fill="#B34B28" />
+                        fill="#183A75" />
                 </Box>
                 <Container maxWidth="lg" sx={{ pt: 15, pb: 2, position: 'relative', zIndex: 1 }}>
                     <Box sx={{
@@ -177,7 +177,7 @@ const HomePage = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
-                                background: '#FFD8B9',
+                                background: '#F4F6F7',
                                 position: 'absolute',
                                 left: '50%',
                                 top: '0',
@@ -285,7 +285,7 @@ This will be a co-owned space for both parents and coaches / mentors and we can 
             <Box sx={{
                 width: '100%',
                 position: 'relative',
-                bgcolor: '#FFD8B9',
+                bgcolor: '#F4F6F7',
                 overflow: 'hidden',
                 pb: 10,
                 px: 7
@@ -316,7 +316,7 @@ This will be a co-owned space for both parents and coaches / mentors and we can 
                     preserveAspectRatio="none"
                 >
                     <path d="M1447.5 0.500089L-102.04 0.500189L-102.04 125.761C-102.04 125.761 64.4603 225.756 204.527 225.756C371.133 225.756 467.402 164.882 630.345 199.62C798.721 235.516 786 281.5 1011.5 317C1142.82 337.673 1447.5 246 1447.5 246L1447.5 0.500089Z"
-                        fill="#B34B28" />
+                        fill="#183A75" />
                 </Box>
                 <Container maxWidth="lg" ref={dayZeroRef} sx={{ position: 'relative', zIndex: 1 }}>
                     <Box sx={{ py: 4 }}>

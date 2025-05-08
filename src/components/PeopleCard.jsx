@@ -10,7 +10,7 @@ import { CardActionArea } from '@mui/material';
 
 const PeopleCard = (props) => {
     return (
-        <Card sx={{boxShadow: "none", backgroundColor: '#FEF7E7'}}>
+        <Card sx={{boxShadow: "none", backgroundColor: '#F4F6F7'}}>
             <CardActionArea>
             <Skeleton 
                     sx={{
