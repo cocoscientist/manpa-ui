@@ -45,12 +45,12 @@ const ArticleList = () => {
                         page={page} 
                         onChange={(e,v) => setCurrentPage(v)} 
                         sx={{
-                            color: '#9c27b0', // Set text color to purple for all items
+                            color: '#343434', // Set text color to purple for all items
                             "& .MuiPaginationItem-root": {
-                                color: '#9c27b0' // Set text color to purple for all items
+                                color: '#343434' // Set text color to purple for all items
                             },
                             "& .MuiPaginationItem-root.Mui-selected": {
-                                color: '#9c27b0' // Set text color to purple for selected item
+                                color: '#343434' // Set text color to purple for selected item
                             }
                         }}
                     />
