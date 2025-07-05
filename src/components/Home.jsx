@@ -32,8 +32,12 @@ const HomePage = () => {
                 overflow: 'hidden',
             }}>
                 
-                <Container maxWidth="lg" sx={{ pt: 15, pb: 2, position: 'relative', zIndex: 1 }}>
+                <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
                     <Box sx={{
+                        backgroundImage:`url(${"assets/manpa_hero_visual.png"})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        height: "65vh",
                         display: 'flex',
                         flexDirection: { xs: 'column', md: 'row' },
                         alignItems: 'center',
@@ -45,12 +49,13 @@ const HomePage = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 position: 'relative',
-                                right: { md: '-5%' },
+                                right: { md: '0%' },
                                 mb: { xs: 4, md: 0 },
                             }}
                         >
-                            <img
-                                src="assets/manpa_hero_visual.png"
+                            {/* <img
+                                src=
+                                
                                 alt="Manpa community"
                                 style={{
                                     width: '100%',
@@ -59,9 +64,20 @@ const HomePage = () => {
                                     objectFit: 'contain',
                                     borderRadius: '4px'
                                 }}
-                            />
+                            /> */}
+                                <svg width="363" height="363" viewBox="0 0 363 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="181.5" cy="181.5" r="179" fill="white" stroke="#183A75" stroke-width="5"/>
+                                </svg>
+                                <img
+                                src="assets/manpacircle.png"
+                                alt="Manpa community"
+                                style={{
+                                    width: '224px',
+                                    height: '218px'
+                                }}
+                                />
                         </Box>
-                        <Box sx={{
+                        {/* <Box sx={{
                             width: { xs: '100%', md: '70%' },
                             textAlign: { xs: 'right', md: 'right' },
                             zIndex: 2,
@@ -69,7 +85,7 @@ const HomePage = () => {
                             left: { md: '-15%' },
                             top: { md: '20px' },
                         }}>
-                            <Typography
+                            {/* <Typography
                                 component="h1"
                                 sx={{
                                     fontFamily: 'Avenir, sans-serif',
@@ -81,8 +97,7 @@ const HomePage = () => {
                                 }}
                             >
                                 Welcome to Ma & Pa, a co-owned space built to support and uplift <em>every parent</em>, just like you.
-                            </Typography>
-                        </Box>
+                            </Typography> */}
                     </Box>
                 </Container>
                 <Box sx={{ mt: 2, mb: 6, textAlign: 'center', position: 'relative' }}>
@@ -95,7 +110,7 @@ const HomePage = () => {
                             zIndex: 2,
                         }}
                     >
-                        <Typography
+                        {/* <Typography
                             component="span"
                             onClick={scrollToSection}
                             sx={{
@@ -107,7 +122,7 @@ const HomePage = () => {
                             }}
                         >
                             see
-                        </Typography>
+                        </Typography> */}
                     </Box>
 
                     <Box
