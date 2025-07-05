@@ -31,22 +31,7 @@ const HomePage = () => {
                 minHeight: '90vh',
                 overflow: 'hidden',
             }}>
-                <Box
-                    component="svg"
-                    sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: 'auto',
-                        maxHeight: { xs: '300px', sm: '350px', md: '480px' }
-                    }}
-                    viewBox="0 64 1440 480"
-                    preserveAspectRatio="none"
-                >
-                    <path d="M0 0H1440V299.5C1440 299.5 1279.26 369.738 1169.5 382C1003.92 400.497 914.743 293.074 749 310C577.731 327.49 510.503 450.676 340 474.5C208.344 492.896 0 458 0 458V0Z"
-                        fill="#183A75" />
-                </Box>
+                
                 <Container maxWidth="lg" sx={{ pt: 15, pb: 2, position: 'relative', zIndex: 1 }}>
                     <Box sx={{
                         display: 'flex',
@@ -65,7 +50,7 @@ const HomePage = () => {
                             }}
                         >
                             <img
-                                src="assets/hero.jpg"
+                                src="assets/manpa_hero_visual.png"
                                 alt="Manpa community"
                                 style={{
                                     width: '100%',

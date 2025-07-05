@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import ArticleHeading from "./articles/ArticleHeading"
 import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
@@ -10,8 +10,7 @@ const ArticleViewer = () => {
     const [articleText, setArticleText] = useState("")
 
     useEffect(()=>{
-        console.log(location)
-        console.log(articleData.id)
+        window.scrollTo(0, 0)
         import(`../utils/articles/${articleData.id}.md`)
         .then(curFile=>{
             fetch(curFile.default)
