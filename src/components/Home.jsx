@@ -65,17 +65,25 @@ const HomePage = () => {
                                     borderRadius: '4px'
                                 }}
                             /> */}
-                                <svg width="363" height="363" viewBox="0 0 363 363" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="181.5" cy="181.5" r="179" fill="white" stroke="#183A75" stroke-width="5"/>
-                                </svg>
-                                <img
-                                src="assets/manpacircle.png"
-                                alt="Manpa community"
-                                style={{
-                                    width: '224px',
-                                    height: '218px'
-                                }}
-                                />
+                                <div style={{
+                                    width:'300px',
+                                    height:'300px',
+                                    borderWidth: 'thick',
+                                    borderRadius: '50%',
+                                    borderColor: '#183A75',
+                                    backgroundColor: '#f5f5f5'
+                                }}>
+                                    <img
+                                    src="assets/manpacircle.png"
+                                    alt="Manpa community"
+                                    style={{
+                                        marginLeft:'12%',
+                                        marginTop:'12%',
+                                        width: '224px',
+                                        height: '218px'
+                                    }}
+                                    />
+                                </div>
                         </Box>
                         {/* <Box sx={{
                             width: { xs: '100%', md: '70%' },
