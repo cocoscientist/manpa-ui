@@ -34,6 +34,7 @@ const ArticleList = () => {
                             image={a.image}
                             id={a.id}
                             credentials={a.credentials}
+                            light={a.lightImage?true:false}
                         />
                     ))
                     : <div>No articles found</div>

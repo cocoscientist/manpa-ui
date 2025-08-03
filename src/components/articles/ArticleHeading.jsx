@@ -36,7 +36,7 @@ const ArticleHeading = (props) => {
                     position: 'absolute',
                     bottom: '25%',
                     left: '66%',
-                    color: '#121212'
+                    color: (props.light?'#121212':'#f5f5f5')
                 }}
             >
                 {props.title}
@@ -46,8 +46,8 @@ const ArticleHeading = (props) => {
                 sx={{
                     position: 'absolute',
                     bottom: '10%',
-                    left: '6%',
-                    color: '#f5f5f5'
+                    left: '66%',
+                    color: (props.light?'#121212':'#f5f5f5')
                 }}
             >
                 {props.credentials}
