@@ -10,6 +10,7 @@ const ArticleViewer = () => {
     const [articleText, setArticleText] = useState("")
 
     useEffect(()=>{
+        console.log(articleData)
         window.scrollTo(0, 0)
         import(`../utils/articles/${articleData.id}.md`)
         .then(curFile=>{
@@ -21,7 +22,7 @@ const ArticleViewer = () => {
 
     return (
         <div className="article-viewer-container">
-            <ArticleHeading title={articleData.title} credentials={articleData.credentials}/>
+            <ArticleHeading title={articleData.title} credentials={articleData.credentials} image={articleData.image} light={articleData.light} author={articleData.author}/>
             <div className="article-content">
                 {articleText!==""
                     ? <ReactMarkdown>{articleText}</ReactMarkdown>

@@ -1,4 +1,4 @@
-import { Skeleton, Typography } from "@mui/material"
+import { Card, CardMedia, Skeleton, Typography } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
 const ArticleHeading = (props) => {
@@ -8,13 +8,14 @@ const ArticleHeading = (props) => {
         <div style={{
             position: 'relative', 
             textAlign: 'center',
-            height: '50vh',  // 40% of viewport height
-            backgroundColor: '#183A75',
+            height: '65vh',  // 40% of viewport height
+            background: '#183A75',
         }}>
-            <Skeleton 
+            <img
+                src={`../${props.image}`}
+                alt={props.title}
                 width={'100%'} 
                 height={'100%'}  // Will fill parent height
-                variant="rectangular"
             />
             <Typography 
                 variant="button" 
@@ -34,8 +35,8 @@ const ArticleHeading = (props) => {
                 sx={{
                     position: 'absolute',
                     bottom: '25%',
-                    left: '6%',
-                    color: '#f5f5f5'
+                    left: '66%',
+                    color: (props.light?'#121212':'#f5f5f5')
                 }}
             >
                 {props.title}
@@ -44,9 +45,20 @@ const ArticleHeading = (props) => {
                 variant="h5" 
                 sx={{
                     position: 'absolute',
+                    bottom: '17%',
+                    left: '66%',
+                    color: (props.light?'#121212':'#f5f5f5')
+                }}
+            >
+                {props.author}
+            </Typography>
+            <Typography 
+                variant="h5" 
+                sx={{
+                    position: 'absolute',
                     bottom: '10%',
-                    left: '6%',
-                    color: '#f5f5f5'
+                    left: '66%',
+                    color: (props.light?'#121212':'#f5f5f5')
                 }}
             >
                 {props.credentials}
