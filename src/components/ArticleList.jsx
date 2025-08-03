@@ -31,6 +31,7 @@ const ArticleList = () => {
                             title={a.title} 
                             intro={a.intro} 
                             author={a.author} 
+                            image={a.image}
                             id={a.id}
                             credentials={a.credentials}
                         />

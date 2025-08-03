@@ -1,4 +1,4 @@
-import { Card, CardActionArea, Skeleton, CardContent, Typography } from "@mui/material"
+import { Card, CardActionArea, CardMedia, Skeleton, CardContent, Typography } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
 const ArticleCard = (props) => {
@@ -34,7 +34,10 @@ const ArticleCard = (props) => {
                         Written by {props.author}
                     </Typography>
                 </CardContent>
-                <Skeleton 
+                <CardMedia
+                    component="img"
+                    image={props.image}
+                    alt={props.title} 
                     sx={{
                         width: '20%',
                         height: '80%', // 80% of parent height
@@ -42,8 +45,7 @@ const ArticleCard = (props) => {
                         right: '2%',
                         top: '50%',
                         transform: 'translateY(-50%)'
-                    }} 
-                    animation="wave" 
+                    }}
                     variant="rectangular" 
                 />
             </CardActionArea>
