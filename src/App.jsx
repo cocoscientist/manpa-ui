@@ -5,7 +5,6 @@ import {
 import HomePage from './components/Home'
 import './css/style.css'
 import Navigation from './components/Navigation'
-import Redirect from './components/Redirect'
 import Contact from './components/Contact'
 import People from './components/People'
 import ArticleList from './components/ArticleList'
@@ -19,7 +18,6 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/home' element={<HomePage/>}/>
-        <Route path='/redirect' element={<Redirect/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/people' element={<People/>}/>
         <Route path='/blogs' element={<ArticleList/>}/>
