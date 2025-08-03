@@ -8,7 +8,7 @@ const ArticleHeading = (props) => {
         <div style={{
             position: 'relative', 
             textAlign: 'center',
-            height: '55vh',  // 40% of viewport height
+            height: '65vh',  // 40% of viewport height
             background: '#183A75',
         }}>
             <img
@@ -40,6 +40,17 @@ const ArticleHeading = (props) => {
                 }}
             >
                 {props.title}
+            </Typography>
+            <Typography 
+                variant="h5" 
+                sx={{
+                    position: 'absolute',
+                    bottom: '17%',
+                    left: '66%',
+                    color: (props.light?'#121212':'#f5f5f5')
+                }}
+            >
+                {props.author}
             </Typography>
             <Typography 
                 variant="h5" 
