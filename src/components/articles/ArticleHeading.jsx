@@ -21,11 +21,12 @@ const ArticleHeading = (props) => {
                 variant="button" 
                 onClick={() => navigate('/blogs')} 
                 sx={{
+                    fontFamily: 'Raleway, Roboto',
                     position: 'absolute',
                     top: '4%',
                     left: '2%',
                     cursor: 'pointer',
-                    color: '#121212'
+                    color: (props.light?'#121212':'#f5f5f5')
                 }}
             >
                 &lt; <u>Back</u>
@@ -33,6 +34,7 @@ const ArticleHeading = (props) => {
             <Typography 
                 variant="h3" 
                 sx={{
+                    fontFamily: 'Raleway, Roboto',
                     position: 'absolute',
                     bottom: '25%',
                     left: '66%',
@@ -44,6 +46,7 @@ const ArticleHeading = (props) => {
             <Typography 
                 variant="h5" 
                 sx={{
+                    fontFamily: 'Raleway, Roboto',
                     position: 'absolute',
                     bottom: '17%',
                     left: '66%',
@@ -55,6 +58,7 @@ const ArticleHeading = (props) => {
             <Typography 
                 variant="h5" 
                 sx={{
+                    fontFamily: 'Raleway, Roboto',
                     position: 'absolute',
                     bottom: '10%',
                     left: '66%',
