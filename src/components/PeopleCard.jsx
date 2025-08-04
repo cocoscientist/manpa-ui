@@ -6,12 +6,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Modal } from '@mui/material';
 
 const PeopleCard = (props) => {
     return (
         <Card sx={{boxShadow: "none", backgroundColor: '#F4F6F7'}}>
-            <CardActionArea>
+            <CardActionArea onClick={props.clickFunc}>
             <Skeleton 
                     sx={{
                         height:'150px',
