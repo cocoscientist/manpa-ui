@@ -8,7 +8,7 @@ const ArticleHeading = (props) => {
         <div style={{
             position: 'relative', 
             textAlign: 'center',
-            height: '65vh',  // 40% of viewport height
+            height: props.image?'65vh':'50vh',  // 40% of viewport height
             background: '#183A75',
         }}>
             {props.image?<img
