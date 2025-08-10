@@ -34,6 +34,7 @@ const ArticleList = () => {
                             image={a.image}
                             id={a.id}
                             credentials={a.credentials}
+                            bigImage={a.bigImage}
                             light={a.lightImage?true:false}
                         />
                     ))
