@@ -11,12 +11,12 @@ const ArticleHeading = (props) => {
             height: '65vh',  // 40% of viewport height
             background: '#183A75',
         }}>
-            <img
+            {props.image?<img
                 src={`../${props.image}`}
                 alt={props.title}
                 width={'100%'} 
                 height={'100%'}  // Will fill parent height
-            />
+            />:<></>}
             <Typography 
                 variant="button" 
                 onClick={() => navigate('/blogs')} 
