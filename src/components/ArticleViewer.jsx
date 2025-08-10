@@ -22,7 +22,7 @@ const ArticleViewer = () => {
 
     return (
         <div className="article-viewer-container">
-            <ArticleHeading title={articleData.title} credentials={articleData.credentials} image={articleData.image} light={articleData.light} author={articleData.author}/>
+            <ArticleHeading title={articleData.title} credentials={articleData.credentials} image={articleData.image} light={articleData.light||articleData.lightImage} author={articleData.author}/>
             <div className="article-content">
                 {articleText!==""
                     ? <ReactMarkdown>{articleText}</ReactMarkdown>
