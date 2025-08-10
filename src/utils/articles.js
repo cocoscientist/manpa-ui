@@ -14,7 +14,6 @@ export const articlesList = [
         "title":"Idols at Home",
         "author":"Richa Gupta",
         "image":"assets/article1.jpeg",
-        "bigImage":"assets/article1.jpeg",
         "credentials":"",
         "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
     },
