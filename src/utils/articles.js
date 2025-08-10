@@ -22,7 +22,7 @@ export const articlesList = [
         "id":"mpa003",
         "title":"Financial Wisdom",
         "author":"Deepak",
-        "image":"assets/article3.jpeg",
+        "image":"assets/finance.png",
         "credentials":"",
         "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
     },
