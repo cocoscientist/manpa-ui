@@ -1,4 +1,4 @@
-import { contacts } from '../utils/contacts'
+import { people } from '../utils/people'
 import Grid from '@mui/material/Grid';
 import PeopleCard from './PeopleCard'
 import { Typography } from '@mui/material';
