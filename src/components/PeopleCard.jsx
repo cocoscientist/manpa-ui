@@ -17,10 +17,10 @@ const PeopleCard = (props) => {
         <>
             <Card sx={{ boxShadow: "none", backgroundColor: '#F4F6F7' }}>
                 <CardActionArea onClick={handleOpen}>
-                    {image ? (
+                    {props.img ? (
                         <CardMedia
                             component="img"
-                            image={image}
+                            image={props.img}
                             alt={name}
                             sx={{
                                 height: '150px',
@@ -45,10 +45,10 @@ const PeopleCard = (props) => {
                     )}
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: "center" }}>
-                            {name || "Full Name"}
+                            {props.name || "Full Name"}
                         </Typography>
                         <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: "center" }}>
-                            {expertise || "Card Description"}
+                            {props.expertise || "Card Description"}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -57,9 +57,9 @@ const PeopleCard = (props) => {
                 <DialogTitle sx={{ textAlign: 'center' }}>{name || "Full Name"}</DialogTitle>
                 <DialogContent>
                     <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-                        {image ? (
+                        {props.img ? (
                             <img
-                                src={image}
+                                src={props.img}
                                 alt={name}
                                 style={{
                                     height: '150px',
@@ -83,19 +83,19 @@ const PeopleCard = (props) => {
                         Areas of Expertise:
                     </Typography>
                     <Typography variant="body2" sx={{ mb: 2 }}>
-                        {expertise || "N/A"}
+                        {props.expertise || "N/A"}
                     </Typography>
                     <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
                         About:
                     </Typography>
                     <Typography variant="body2" sx={{ mb: 2 }}>
-                        {about || "N/A"}
+                        {props.desc || "N/A"}
                     </Typography>
                     <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
                         Background:
                     </Typography>
                     <Typography variant="body2">
-                        {background || "N/A"}
+                        {props.designation || "N/A"}
                     </Typography>
                 </DialogContent>
             </Dialog>

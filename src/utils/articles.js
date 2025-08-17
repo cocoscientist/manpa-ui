@@ -26,41 +26,5 @@ export const articlesList = [
         "lightImage":true,
         "credentials":"",
         "intro":"Financial literacy starts with understanding the balance between saving and investing, then aligning both with your personal goals. This article outlines practical habits, smart investment principles, and planning tools to help your money work for you."
-    },
-    {
-        "id":"article001",
-        "title":"Sample Article Title",
-        "author":"Author Name",
-        "image":"assets/article1.jpeg",
-        "credentials":"Credentials of Author",
-        "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
-    },{
-        "id":"article002",
-        "title":"Sample Article Title",
-        "author":"Author Name",
-        "image":"assets/article2.jpg",
-        "credentials":"Credentials of Author",
-        "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
-    },{
-        "id":"article003",
-        "title":"Extended Title with a Lot of Very Many Words",
-        "author":"Author Name",
-        "image":"assets/article3.jpeg",
-        "credentials":"Credentials of Author",
-        "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
-    },{
-        "id":"article004",
-        "title":"Sample Article Title",
-        "author":"Author Name",
-        "image":"assets/article4.jpg",
-        "credentials":"Credentials of Author",
-        "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
-    },{
-        "id":"article005",
-        "title":"Sample Article Title",
-        "author":"Author Name",
-        "image":"assets/article5.jpeg",
-        "credentials":"Credentials of Author",
-        "intro":"This text is an introduction to the content of the article, which is currently a sample article. On clicking this article you will get to learn more about the topic by reading the article."
     }
 ]
